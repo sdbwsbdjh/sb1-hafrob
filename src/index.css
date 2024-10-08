@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #fff6d4;
+  --color-secondary: #fce5cb;
+  --color-tertiary: #fdcdc5;
+  --color-quaternary: #ffb2c2;
+  --color-quinary: #eba4cd;
+}
+
+.dark {
+  --color-primary: #2d2d2d;
+  --color-secondary: #3a3a3a;
+  --color-tertiary: #4a4a4a;
+  --color-quaternary: #5a5a5a;
+  --color-quinary: #6a6a6a;
+}
+
+body {
+  @apply bg-primary text-gray-900 dark:text-gray-100;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md transition-colors duration-200;
+  }
+  .btn-primary {
+    @apply bg-secondary hover:bg-tertiary text-gray-900;
+  }
+  .btn-secondary {
+    @apply bg-quaternary hover:bg-quinary text-gray-900;
+  }
+}
